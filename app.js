@@ -6,7 +6,14 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    setName(event, lastName) {
+    outputFullname() {
+      console.log('Running again...');
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'Mitchell';
+    }, 
+    setName(event) {
       this.name = event.target.value;
     },
     add(num) {
